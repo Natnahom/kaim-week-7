@@ -1,0 +1,18 @@
+name: my_project
+version: 1.0.0
+config-version: 2
+profile: my_project
+
+model-paths: ["my_project/models"]
+seed-paths: ["my_project/seeds"]
+test-paths: ["my_project/tests"]
+analysis-paths: ["my_project/analyses"]
+macro-paths: ["my_project/macros"]
+snapshot-paths: ["my_project/snapshots"]
+
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  my_project:
+    +materialized: view
