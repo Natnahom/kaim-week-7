@@ -5,4 +5,4 @@ SELECT
     views,
     media,
     LENGTH(message) AS message_length
-FROM {{ ref('eahci_messages') }}
+FROM "kaim_week7"."public"."yetenaweg_messages"

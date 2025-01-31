@@ -5,4 +5,4 @@ SELECT
     views,
     media,
     LENGTH(message) AS message_length
-FROM {{ ref('yetenaweg_messages') }}
+FROM {{ source('kaim_week7', 'yetenaweg_messages') }}

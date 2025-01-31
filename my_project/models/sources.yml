@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: kaim_week7
+    schema: public  
+    tables:
+      - name: doctorset_messages
+      - name: eahci_messages
+      - name: lobelia4cosmetics_messages
+      - name: yetenaweg_messages

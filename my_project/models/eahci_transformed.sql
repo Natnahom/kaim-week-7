@@ -5,4 +5,4 @@ SELECT
     views,
     media,
     LENGTH(message) AS message_length
-FROM {{ source('kaim_week7', 'doctorset_messages') }}
+FROM {{ source('kaim_week7', 'eahci_messages') }}

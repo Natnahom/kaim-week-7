@@ -37,6 +37,18 @@ def save_to_postgresql(data_file, table_name):
         # Load cleaned data
         df = pd.read_csv(data_file)
 
+        # Ensure 'views' column exists
+        if 'views' in df.columns:
+            # Convert views column to numeric, coercing errors to NaN
+            df['views'] = pd.to_numeric(df['views'], errors='coerce')
+            
+            # Replace NaN or empty strings with 0 or None for empty cells
+            df['views'] = df['views'].fillna(0)  # Use 0 for empty cells
+            # If you want to use None instead, uncomment the line below:
+            # df['views'] = df['views'].where(pd.notna(df['views']), None)
+        else:
+            logging.warning(f"'views' column not found in {data_file}.")
+            
         # Create table if it doesn't exist
         create_table_query = sql.SQL("""
             CREATE TABLE IF NOT EXISTS {} (

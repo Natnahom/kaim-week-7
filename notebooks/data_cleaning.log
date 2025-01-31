@@ -78,3 +78,42 @@
 
 2025-01-30 10:54:20,863 - ERROR - Error saving data to PostgreSQL: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres,"
 
+2025-01-31 11:05:58,614 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:05:58,802 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:05:59,001 - INFO - Data saved to PostgreSQL table lobelia4cosmetics_messages
+2025-01-31 11:05:59,068 - ERROR - Error saving data to PostgreSQL: [Errno 2] No such file or directory: '../cleaned_data/yetenaweg_messages'
+2025-01-31 11:07:00,953 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:07:01,037 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:07:01,150 - INFO - Data saved to PostgreSQL table lobelia4cosmetics_messages
+2025-01-31 11:07:01,402 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:12:29,116 - ERROR - Error saving data to PostgreSQL: bigint out of range
+
+2025-01-31 11:12:29,213 - ERROR - Error saving data to PostgreSQL: bigint out of range
+
+2025-01-31 11:12:29,361 - INFO - Data saved to PostgreSQL table lobelia4cosmetics_messages
+2025-01-31 11:12:29,472 - ERROR - Error saving data to PostgreSQL: bigint out of range
+
+2025-01-31 11:24:24,825 - ERROR - Error saving data to PostgreSQL: Must specify a fill 'value' or 'method'.
+2025-01-31 11:24:24,902 - ERROR - Error saving data to PostgreSQL: Must specify a fill 'value' or 'method'.
+2025-01-31 11:24:24,991 - ERROR - Error saving data to PostgreSQL: Must specify a fill 'value' or 'method'.
+2025-01-31 11:24:25,071 - ERROR - Error saving data to PostgreSQL: Must specify a fill 'value' or 'method'.
+2025-01-31 11:26:37,297 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:26:37,570 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:26:37,770 - INFO - Data saved to PostgreSQL table lobelia4cosmetics_messages
+2025-01-31 11:26:37,899 - ERROR - Error saving data to PostgreSQL: integer out of range
+
+2025-01-31 11:33:17,599 - ERROR - Error saving data to PostgreSQL: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-31 11:33:17,672 - ERROR - Error saving data to PostgreSQL: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-31 11:33:17,745 - ERROR - Error saving data to PostgreSQL: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-31 11:33:17,822 - ERROR - Error saving data to PostgreSQL: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-31 11:35:37,835 - INFO - Data saved to PostgreSQL table doctorset_messages
+2025-01-31 11:35:37,990 - INFO - Data saved to PostgreSQL table eahci_messages
+2025-01-31 11:35:38,129 - INFO - Data saved to PostgreSQL table lobelia4cosmetics_messages
+2025-01-31 11:35:38,293 - INFO - Data saved to PostgreSQL table yetenaweg_messages
