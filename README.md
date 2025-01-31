@@ -112,3 +112,149 @@ Integrate with Data Warehouse:
 
 Load the scraped data into a data warehouse (e.g., PostgreSQL) for further analysis.
 
+# Task 2: Data Cleaning and Transformation Pipeline
+- This project involves cleaning and transforming scraped data from Telegram channels related to Ethiopian medical businesses. The cleaned data is stored in a PostgreSQL database and transformed using DBT (Data Build Tool) for advanced analysis.
+
+## Overview
+The goal of this task is to:
+
+1. Clean the raw data by handling missing values, duplicates, and inconsistencies.
+
+2. Transform the data into a structured format suitable for analysis.
+
+3. Store the cleaned data in a PostgreSQL database.
+
+4. Use DBT for advanced data transformation and testing.
+
+## Features
+- Data Cleaning:
+
+    - Removes duplicates, handles missing values, and standardizes formats.
+
+    - Validates data to ensure consistency.
+
+- Data Storage:
+
+    - Stores cleaned data in PostgreSQL tables.
+
+- DBT for Transformation:
+
+    - Defines SQL models for advanced transformations.
+
+    - Runs tests to ensure data quality.
+
+    - Generates documentation for the project.
+
+- Logging:
+
+    - Detailed logs track the cleaning and transformation process.
+
+## Prerequisites
+Before running the pipeline, ensure you have the following:
+
+- Python 3.9 or higher: Install Python from python.org.
+
+- PostgreSQL: Install PostgreSQL from postgresql.org.
+
+- Required Python Libraries:
+Install the required libraries using the following command:
+
+    - pip install pandas psycopg2 python-dotenv
+- DBT: Install DBT using:
+
+    - pip install dbt-core dbt-postgres
+
+## Setup
+- Clone the Repository
+- Set Up Environment Variables
+Create a .env file in the root directory and add your PostgreSQL credentials:
+
+    DB_NAME=your_db_name
+    DB_USER=your_db_user
+    DB_PASSWORD=your_db_password
+    DB_HOST=your_host
+    DB_PORT=your_port_number
+
+3. Create PostgreSQL Tables
+Run the save_to_postgresql.py script to create tables and insert cleaned data:
+
+- python scripts/save_to_postgresql.py
+4. Set Up DBT
+Initialize a DBT project and configure it to connect to your PostgreSQL database:
+
+dbt init my_project
+cd my_project
+Update the profiles.yml(found in C/Users/your_username/.dbt) file with your PostgreSQL credentials:
+
+my_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: your_host
+      port: your_port_number
+      user: your_db_user
+      password: your_db_password
+      dbname: your_db_name
+      schema: public
+      threads: 4
+## Running the Pipeline
+1. Data Cleaning
+Run the clean_data.py script to clean the raw data:
+
+- Follow the analysis.ipynb
+2. Data Storage
+Run the save_to_postgresql.py script to store the cleaned data in PostgreSQL:
+
+- Follow the analysis.ipynb
+3. DBT Transformation
+Navigate to your DBT project directory and run the transformations:
+
+dbt run
+4. Testing and Documentation
+Run tests and generate documentation:
+
+dbt test
+dbt docs generate
+dbt docs serve
+
+## Output
+- Cleaned Data:
+
+CSV files in the cleaned_data directory.
+
+PostgreSQL tables: doctorset_messages, eahci_messages, lobelia4cosmetics_messages, yetenaweg_messages.
+
+- DBT Models:
+
+SQL models in the models directory.
+
+Documentation available at http://localhost:8080.
+
+- Logs:
+
+Detailed logs in data_cleaning.log and dbt.log.
+
+# Troubleshooting
+- PostgreSQL Connection Issues:
+
+Verify that your PostgreSQL server is running and accessible.
+
+Double-check the connection details in .env and profiles.yml.
+
+- DBT Errors:
+
+Ensure the source tables exist in PostgreSQL.
+
+Check the schema.yml file for correct source definitions.
+
+- Data Quality Issues:
+
+Review the logs for errors during cleaning and transformation.
+
+Validate the data in PostgreSQL using SQL queries.
+
+
+# AUTHOR
+- Name: Natnahom Asfaw
+- Date: 31/01/2025

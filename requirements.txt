@@ -1,3 +1,7 @@
 pandas
 telethon
 python-dotenv
+psycopg2
+python-dotenv
+dbt-core 
+dbt-postgres
