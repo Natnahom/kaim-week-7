@@ -1,0 +1,22 @@
+2025-01-30 09:24:35,044 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-01-30 09:24:39,813 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-01-30 09:39:26,068 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-01-30 09:39:26,354 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-01-30 09:39:27,424 - INFO - Phone migrated to 4
+2025-01-30 09:39:27,573 - INFO - Reconnecting to new data center 4
+2025-01-30 09:39:27,923 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-01-30 09:39:27,924 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-01-30 09:39:27,929 - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2025-01-30 09:39:30,348 - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2025-01-30 09:40:02,459 - INFO - Client started successfully. Beginning scraping...
+2025-01-30 09:40:02,460 - INFO - Fetching messages from @DoctorsET
+2025-01-30 09:40:05,401 - INFO - Saved 100 messages to raw_data\@DoctorsET_messages.csv
+2025-01-30 09:40:05,402 - INFO - Fetching messages from @Chemed
+2025-01-30 09:40:07,878 - INFO - Fetching messages from @lobelia4cosmetics
+2025-01-30 09:40:10,771 - INFO - Saved 100 messages to raw_data\@lobelia4cosmetics_messages.csv
+2025-01-30 09:40:10,771 - INFO - Fetching messages from @yetenaweg
+2025-01-30 09:40:13,990 - INFO - Saved 100 messages to raw_data\@yetenaweg_messages.csv
+2025-01-30 09:40:13,991 - INFO - Fetching messages from @EAHCI
+2025-01-30 09:40:17,076 - INFO - Saved 100 messages to raw_data\@EAHCI_messages.csv
+2025-01-30 09:40:17,076 - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2025-01-30 09:40:17,077 - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
