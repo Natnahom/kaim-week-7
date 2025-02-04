@@ -8,3 +8,6 @@ dbt-postgres
 opencv-python
 torch
 torchvision
+sqlalchemy
+fastapi
+uvicorn
