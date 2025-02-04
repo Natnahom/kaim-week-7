@@ -1,3 +1,5 @@
 .myvenv7
 *.env
 logs/
+yolov5/
+*.log

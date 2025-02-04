@@ -5,3 +5,6 @@ psycopg2
 python-dotenv
 dbt-core 
 dbt-postgres
+opencv-python
+torch
+torchvision
