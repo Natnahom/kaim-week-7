@@ -255,6 +255,176 @@ Review the logs for errors during cleaning and transformation.
 Validate the data in PostgreSQL using SQL queries.
 
 
+# Task 3: Object Detection Using YOLO
+## Overview
+Use the YOLOv5 model to detect objects in images.
+
+Save detection results (e.g., bounding boxes, confidence scores, class labels) to a PostgreSQL database.
+
+Log the detection process for monitoring and debugging.
+
+## Features
+Object Detection:
+
+- Detect objects in images using YOLOv5.
+
+- Save detection results to a PostgreSQL database.
+
+Logging:
+
+- Detailed logs for monitoring and debugging.
+
+## Prerequisites
+Before running the pipeline, ensure you have the following installed:
+
+1. Python 3.9 or higher: Install Python from python.org.
+
+2. PostgreSQL: Install PostgreSQL from postgresql.org.
+
+3. Required Python Libraries:
+Install the required libraries using the following command:
+
+- pip install -r requirements.txt
+4. YOLOv5:
+Clone the YOLOv5 repository and install its dependencies:
+
+- git clone https://github.com/ultralytics/yolov5.git
+- cd yolov5
+- pip install -r requirements.txt
+
+## Setup
+Just like task-2 to set up Environment Variables
+Create a .env file in the root directory and add your PostgreSQL credentials:
+
+    DB_NAME=your_db_name
+    DB_USER=your_db_user
+    DB_PASSWORD=your_db_password
+    DB_HOST=your_host
+    DB_PORT=your_port_number
+
+- To download images from desired telegram channels run (it save the images in ../data/images/ outside of your folder)
+    - python scripts/telegram_images.py
+
+- Don't forget to store your 
+    - API_ID=your_telegram_api_id
+    - API_HASH=your_telegram_api_hash
+    in the .env file.
+- Then follow the imgDetection_analysis.ipynb for further instructions.
+
+# Task 4: Expose the Collected Data Using FastAPI
+## Overview
+Create a FastAPI application to expose the detection results via RESTful APIs.
+
+Implement CRUD (Create, Read, Update, Delete) operations for the detection data.
+
+Generate API documentation using Swagger UI.
+
+## Features
+FastAPI Integration:
+
+- Expose detection results via RESTful APIs.
+
+- Perform CRUD operations on the detection data.
+
+Logging:
+
+- Detailed logs for monitoring and debugging.
+
+## Prerequisites
+Before running the pipeline, ensure you have the following installed:
+
+1. Python 3.9 or higher: Install Python from python.org.
+
+2. PostgreSQL: Install PostgreSQL from postgresql.org.
+
+3. Required Python Libraries:
+Install the required libraries using the following command:
+
+- pip install -r requirements.txt setup your .env just like the previous tasks(for database).
+
+# API Endpoints
+The FastAPI application exposes the following endpoints:
+
+1. Get All Detections
+Endpoint: GET /detections/
+
+Description: Retrieve all detection results.
+
+Example Response:
+
+[
+  {
+    "id": 1,
+    "image_path": "data/images/photo_2023-01-03_17-49-48.jpg",
+    "class_name": "person",
+    "confidence": 0.95,
+    "x1": 100,
+    "y1": 200,
+    "x2": 300,
+    "y2": 400
+  }
+]
+2. Get Detection by ID
+Endpoint: GET /detections/{detection_id}
+
+Description: Retrieve a specific detection by ID.
+
+Example Response:
+
+{
+  "id": 1,
+  "image_path": "data/images/photo_2023-01-03_17-49-48.jpg",
+  "class_name": "person",
+  "confidence": 0.95,
+  "x1": 100,
+  "y1": 200,
+  "x2": 300,
+  "y2": 400
+}
+3. Create Detection
+Endpoint: POST /detections/
+
+Description: Create a new detection entry.
+
+Example Request:
+
+{
+  "image_path": "data/images/photo_2023-01-03_17-49-48.jpg",
+  "class_name": "person",
+  "confidence": 0.95,
+  "x1": 100,
+  "y1": 200,
+  "x2": 300,
+  "y2": 400
+}
+4. Delete Detection
+Endpoint: DELETE /detections/{detection_id}
+
+Description: Delete a detection by ID.
+
+# FastAPI Application
+Start the FastAPI application:
+    - uvicorn app.main:app --reload
+
+## Troubleshooting
+1. YOLOv5 Not Found:
+
+- Ensure the YOLOv5 repository is cloned and added to the Python path.
+
+- Update the sys.path.append() statement in src/main.py to point to the correct YOLOv5 directory.
+
+2. Database Connection Issues:
+
+- Verify that your PostgreSQL server is running and accessible.
+
+- Double-check the connection details in .env.
+
+3. Image Loading Errors:
+
+- Ensure the data/images directory contains valid image files.
+
+- Check file permissions and paths.
+
 # AUTHOR
 - Name: Natnahom Asfaw
 - Date: 31/01/2025
